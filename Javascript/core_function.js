@@ -158,22 +158,24 @@ function newPlayer() {
     console.log(useres)
 }
 
+// Make algorithm about Random math and rate
+
 function dealCards() {
+    let countCardLeft = deck.length;
+    console.log(countCardLeft)
     let numPlayer = useres.length;
     let i = 0;
     for (let x = 0; x < numPlayer; x++) {
         let tempDeck = [];
         useres[x].playerDeck = [];
         for (i = 0; i < 3; i++) {
-            let cardIndex = Math.floor(Math.random() * (36 - i - (x * 3)));
-            console.log(cardIndex);
-            tempDeck.push(deck[cardIndex]);
+            let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
+            console.log(cardIndexRemove);
+            tempDeck.push(deck[cardIndexRemove]);
             useres[x].playerDeck = tempDeck;
-            deck.splice(cardIndex, 1)
+            deck.splice(cardIndexRemove, 1)
         }
     }
-    calPlayerScore();
-    callFindTopCard();
     console.log(useres);
     console.log(deck);
 }
@@ -252,11 +254,13 @@ function compareScore() {
     return topPlayer
 }
 
-// function calMoney(){
-//     compareScore();
-//     let money =
-//     for
-// }
+function calMoney(){
+    compareScore();
+    let money;
+    for (x=0;x<useres.length;x++){
+        money = useres[x].playerMoney.getPlayerMoney()
+    }
+}
 function testPerfomance(){
     makeNewDeck();
     dealCards();
