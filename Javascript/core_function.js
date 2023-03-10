@@ -219,10 +219,18 @@ function callFindTopCard() {
 function compareScore() {
     let topPlayer = new Players();
     let top = useres[0].getPlayerScore();
-    let indexTop = 0;
+    // let indexTop = 0;
+    let topSuit = useres[0].findTopCard().getCardSuitScore();
     let nameTop = useres[0].getPlayerName();
     for (let x = 1; x < useres.length; x++) {
-        if (top < useres[x].getPlayerScore()) {
+        if (top === useres[x].getPlayerScore()){
+            if (topSuit < useres[x].findTopCard().getCardSuitScore()){
+                topSuit = useres[x].findTopCard().getCardSuitScore();
+                top = useres[x].getPlayerScore();
+                nameTop = useres[x].getPlayerName();
+                topPlayer.setPlayerName(nameTop);
+            } else topPlayer.setPlayerName(nameTop);
+        } else if (top < useres[x].getPlayerScore()) {
             top = useres[x].getPlayerScore();
             nameTop = useres[x].getPlayerName();
             topPlayer.setPlayerName(nameTop)
