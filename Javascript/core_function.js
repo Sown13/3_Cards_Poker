@@ -92,6 +92,7 @@ class Players {
     getPlayerDeck() {
         return this.playerDeck;
     }
+
     findTopCard() {
         let topCard = new Cards();
         let topSuitScore = parseInt(this.playerDeck[0].getCardSuitScore());
@@ -106,16 +107,25 @@ class Players {
                     topCard.setCardValue(topCardValue);
                     topCard.setCardSuit(topSuit);
                     topCard.setCardSuitScore(topSuitScore);
+                } else {
+                    topCard.setCardValue(topCardValue);
+                    topCard.setCardSuit(topSuit);
+                    topCard.setCardSuitScore(topSuitScore);
                 }
-            } else if (topSuitScore < parseInt(this.playerDeck[y].getCardSuitScore())){
+            } else if (topSuitScore < parseInt(this.playerDeck[y].getCardSuitScore())) {
                 topSuitScore = parseInt(this.playerDeck[y].getCardSuitScore());
                 topCardValue = this.playerDeck[y].getCardValue();
                 topSuit = this.playerDeck[y].getCardSuit();
                 topCard.setCardValue(topCardValue);
                 topCard.setCardSuit(topSuit);
                 topCard.setCardSuitScore(topSuitScore);
+            } else {
+                topCard.setCardValue(topCardValue);
+                topCard.setCardSuit(topSuit);
+                topCard.setCardSuitScore(topSuitScore);
             }
-        } return topCard
+        }
+        return topCard;
     }
 }
 
@@ -150,6 +160,8 @@ function dealCards() {
             deck.splice(cardIndex, 1)
         }
     }
+    calPlayerScore();
+    callFindTopCard();
     console.log(useres);
     console.log(deck);
 }
@@ -164,7 +176,11 @@ function calPlayerScore() {
 }
 
 function take2ndDiggit(number) {
-    return number - (Math.floor(number / 10)) * 10;
+    let c = number - (Math.floor(number / 10)) * 10;
+    if (c === 0) {
+        return 10;
+    }
+    return c;
 }
 
 // function findTopCard() {
@@ -193,25 +209,32 @@ function take2ndDiggit(number) {
 //     } console.log(topCard)
 // }
 
-function callFindTopCard(){
-    for(let x=0;x<useres.length;x++){
+function callFindTopCard() {
+    for (let x = 0; x < useres.length; x++) {
         useres[x].findTopCard();
         console.log(useres[x].findTopCard())
     }
 }
- function compareScore(){
-    calPlayerScore();
-    console.log(useres);
-    let top = useres[0].getPlayerScore()
-     let indexTop = 0;
-    let nameTop =''
+
+function compareScore() {
     let topPlayer = new Players();
-    for(let x=1;x<useres.length;x++){
-        if (top<useres[x].getPlayerScore()){
+    let top = useres[0].getPlayerScore();
+    let indexTop = 0;
+    let nameTop = useres[0].getPlayerName();
+    for (let x = 1; x < useres.length; x++) {
+        if (top < useres[x].getPlayerScore()) {
             top = useres[x].getPlayerScore();
             nameTop = useres[x].getPlayerName();
             topPlayer.setPlayerName(nameTop)
-        }
-    } console.log(topPlayer)
+        } else topPlayer.setPlayerName(nameTop)
+    }
+    console.log(topPlayer)
     return topPlayer
- }
+}
+function testPerfomance(){
+    makeNewDeck();
+    dealCards();
+    callFindTopCard();
+    compareScore();
+    console.log(useres)
+}
