@@ -6,15 +6,15 @@ class Cards {
     }
 
     getCardValue() {
-        return this.cardValue = valueNumber;
+        return this.cardValue;
     }
 
     getCardSuit() {
-        return this.cardSuit = suit;
+        return this.cardSuit;
     }
 
     getCardSuitScore() {
-        return this.cardSuitScore = suitScore;
+        return this.cardSuitScore;
     }
 
     setCardValue(value) {
@@ -51,7 +51,7 @@ function makeNewDeck() {
     console.log(deck)
 }
 
-// User
+// User~Player~PalyerDeck
 
 class Players {
     constructor(name, score, money) {
@@ -62,15 +62,15 @@ class Players {
     }
 
     getPlayerScore() {
-        return this.playerScore = score;
+        return this.playerScore;
     }
 
     getPlayerName() {
-        return this.playerName = name;
+        return this.playerName;
     }
 
     getPlayerMoney() {
-        return this.playerMoney = money;
+        return this.playerMoney;
     }
 
     setPlayerMoney(money) {
@@ -91,6 +91,31 @@ class Players {
 
     getPlayerDeck() {
         return this.playerDeck;
+    }
+    findTopCard() {
+        let topCard = new Cards();
+        let topSuitScore = parseInt(this.playerDeck[0].getCardSuitScore());
+        let topSuit = this.playerDeck[0].getCardSuit();
+        let topCardValue = parseInt(this.playerDeck[0].getCardValue())
+        for (let y = 1; y < 3; y++) {
+            if (topSuitScore === parseInt(this.playerDeck[y].getCardSuitScore())) {
+                if (topCardValue < this.playerDeck[y].getCardValue()) {
+                    topCardValue = this.playerDeck[y].getCardValue();
+                    topSuit = this.playerDeck[y].getCardSuit();
+                    topSuitScore = this.playerDeck[y].getCardSuitScore();
+                    topCard.setCardValue(topCardValue);
+                    topCard.setCardSuit(topSuit);
+                    topCard.setCardSuitScore(topSuitScore);
+                }
+            } else if (topSuitScore < parseInt(this.playerDeck[y].getCardSuitScore())){
+                topSuitScore = parseInt(this.playerDeck[y].getCardSuitScore());
+                topCardValue = this.playerDeck[y].getCardValue();
+                topSuit = this.playerDeck[y].getCardSuit();
+                topCard.setCardValue(topCardValue);
+                topCard.setCardSuit(topSuit);
+                topCard.setCardSuitScore(topSuitScore);
+            }
+        } return topCard
     }
 }
 
@@ -114,7 +139,7 @@ function newPlayer() {
 function dealCards() {
     let numPlayer = useres.length;
     let i = 0;
-    for (x = 0; x < numPlayer; x++) {
+    for (let x = 0; x < numPlayer; x++) {
         let tempDeck = [];
         useres[x].playerDeck = [];
         for (i = 0; i < 3; i++) {
@@ -129,3 +154,64 @@ function dealCards() {
     console.log(deck);
 }
 
+function calPlayerScore() {
+    for (let x = 0; x < useres.length; x++) {
+        let total = 0;
+        for (let y = 0; y < 3; y++)
+            total += parseInt(useres[x].playerDeck[y].getCardValue())
+        useres[x].setPlayerScore(take2ndDiggit(total));
+    }
+}
+
+function take2ndDiggit(number) {
+    return number - (Math.floor(number / 10)) * 10;
+}
+
+// function findTopCard() {
+//     let topCard = new Cards();
+//     let topSuitScore = parseInt(useres.playerDeck[0].getCardSuitScore());
+//     let topSuit = useres.playerDeck[0].getCardSuit();
+//     let topCardValue = parseInt(useres.playerDeck[0].getCardValue())
+//     for (let y = 1; y < 3; y++) {
+//         if (topSuitScore === parseInt(useres.playerDeck[y].getCardSuitScore())) {
+//             if (topCardValue < useres.playerDeck[y].getCardValue()) {
+//                 topCardValue = useres.playerDeck[y].getCardValue();
+//                 topSuit = useres.playerDeck[y].getCardSuit();
+//                 topSuitScore = useres.playerDeck[y].getCardSuitScore();
+//                 topCard.setCardValue(topCardValue);
+//                 topCard.setCardSuit(topSuit);
+//                 topCard.setCardSuitScore(topSuitScore);
+//             }
+//         } else if (topSuitScore < parseInt(useres.playerDeck[y].getCardSuitScore())){
+//             topSuitScore = parseInt(useres.playerDeck[y].getCardSuitScore());
+//             topCardValue = useres.playerDeck[y].getCardValue();
+//             topSuit = useres.playerDeck[y].getCardSuit();
+//             topCard.setCardValue(topCardValue);
+//             topCard.setCardSuit(topSuit);
+//             topCard.setCardSuitScore(topSuitScore);
+//         }
+//     } console.log(topCard)
+// }
+
+function callFindTopCard(){
+    for(let x=0;x<useres.length;x++){
+        useres[x].findTopCard();
+        console.log(useres[x].findTopCard())
+    }
+}
+ function compareScore(){
+    calPlayerScore();
+    console.log(useres);
+    let top = useres[0].getPlayerScore()
+     let indexTop = 0;
+    let nameTop =''
+    let topPlayer = new Players();
+    for(let x=1;x<useres.length;x++){
+        if (top<useres[x].getPlayerScore()){
+            top = useres[x].getPlayerScore();
+            nameTop = useres[x].getPlayerName();
+            topPlayer.setPlayerName(nameTop)
+        }
+    } console.log(topPlayer)
+    return topPlayer
+ }
