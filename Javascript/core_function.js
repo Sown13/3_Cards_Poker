@@ -1,8 +1,9 @@
 class Cards {
-    constructor(value, suit, suitScore) {
+    constructor(value, suit, suitScore,specialValue) {
         this.cardValue = value;
         this.cardSuit = suit;
         this.cardSuitScore = suitScore;
+        this.cardSpecial = specialValue;
     }
 
     getCardValue() {
@@ -28,13 +29,22 @@ class Cards {
     setCardSuitScore(suitScore) {
         this.cardSuitScore = suitScore;
     }
+    getSpecialCardValue() {
+        return this.cardSpecial;
+    }
+    setSpecialCardValue(specialValue) {
+        this.cardSpecial = specialValue;
+    }
 }
+
 
 // Make a new deck
 let suits = ['Diamond', 'Heart', 'Club', 'Spade'];
 let suitScores = [4, 3, 2, 1];
 let values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+let specialValues = [10, 2, 3, 4, 5, 6, 7, 8, 9];
 let deck = [];
+let betRate;
 
 function makeNewDeck() {
     deck = [];
@@ -45,6 +55,7 @@ function makeNewDeck() {
             cardInDeck.setCardSuit(suits[i]);
             cardInDeck.setCardSuitScore(suitScores[i]);
             cardInDeck.setCardValue(values[j]);
+            cardInDeck.setSpecialCardValue(specialValues[j]);
             deck.push(cardInDeck);
         }
     }
@@ -97,30 +108,30 @@ class Players {
         let topCard = new Cards();
         let topSuitScore = parseInt(this.playerDeck[0].getCardSuitScore());
         let topSuit = this.playerDeck[0].getCardSuit();
-        let topCardValue = parseInt(this.playerDeck[0].getCardValue())
+        let topCardValue = parseInt(this.playerDeck[0].getSpecialCardValue())
         for (let y = 1; y < 3; y++) {
             if (topSuitScore === parseInt(this.playerDeck[y].getCardSuitScore())) {
-                if (topCardValue < this.playerDeck[y].getCardValue()) {
-                    topCardValue = this.playerDeck[y].getCardValue();
+                if (topCardValue < this.playerDeck[y].getSpecialCardValue()) {
+                    topCardValue = this.playerDeck[y].getSpecialCardValue();
                     topSuit = this.playerDeck[y].getCardSuit();
                     topSuitScore = this.playerDeck[y].getCardSuitScore();
-                    topCard.setCardValue(topCardValue);
+                    topCard.setSpecialCardValue(topCardValue);
                     topCard.setCardSuit(topSuit);
                     topCard.setCardSuitScore(topSuitScore);
                 } else {
-                    topCard.setCardValue(topCardValue);
+                    topCard.setSpecialCardValue(topCardValue);
                     topCard.setCardSuit(topSuit);
                     topCard.setCardSuitScore(topSuitScore);
                 }
             } else if (topSuitScore < parseInt(this.playerDeck[y].getCardSuitScore())) {
                 topSuitScore = parseInt(this.playerDeck[y].getCardSuitScore());
-                topCardValue = this.playerDeck[y].getCardValue();
+                topCardValue = this.playerDeck[y].getSpecialCardValue();
                 topSuit = this.playerDeck[y].getCardSuit();
-                topCard.setCardValue(topCardValue);
+                topCard.setSpecialCardValue(topCardValue);
                 topCard.setCardSuit(topSuit);
                 topCard.setCardSuitScore(topSuitScore);
             } else {
-                topCard.setCardValue(topCardValue);
+                topCard.setSpecialCardValue(topCardValue);
                 topCard.setCardSuit(topSuit);
                 topCard.setCardSuitScore(topSuitScore);
             }
@@ -133,7 +144,7 @@ let useres = [];
 
 function newPlayer() {
     useres = [];
-    useres.length = parseInt(prompt("Số người chơi (làm ơn nhập số <= 6 Plz~)"));
+    useres.length = parseInt(prompt("Bạn muốn chơi bao nhiêu người? (tối đa 12 người Plz~)"));
     for (let x = 0; x < useres.length; x++) {
         let player = new Players();
         let playerName = prompt(`Nhập tên người chơi thứ ${x + 1}`);
@@ -143,6 +154,7 @@ function newPlayer() {
         player.setPlayerMoney(playerMoney);
         useres[x] = player;
     }
+    betRate = parseInt(prompt("Nhập số tiền bạn muốn đặt cược mỗi lần chơi"));
     console.log(useres)
 }
 
@@ -239,6 +251,12 @@ function compareScore() {
     console.log(topPlayer)
     return topPlayer
 }
+
+// function calMoney(){
+//     compareScore();
+//     let money =
+//     for
+// }
 function testPerfomance(){
     makeNewDeck();
     dealCards();
