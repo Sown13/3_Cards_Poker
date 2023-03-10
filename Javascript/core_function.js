@@ -1,5 +1,5 @@
 class Cards {
-    constructor(value, suit, suitScore,specialValue) {
+    constructor(value, suit, suitScore, specialValue) {
         this.cardValue = value;
         this.cardSuit = suit;
         this.cardSuitScore = suitScore;
@@ -29,9 +29,11 @@ class Cards {
     setCardSuitScore(suitScore) {
         this.cardSuitScore = suitScore;
     }
+
     getSpecialCardValue() {
         return this.cardSpecial;
     }
+
     setSpecialCardValue(specialValue) {
         this.cardSpecial = specialValue;
     }
@@ -176,6 +178,8 @@ function dealCards() {
             deck.splice(cardIndexRemove, 1)
         }
     }
+    calPlayerScore();
+    callFindTopCard();
     console.log(useres);
     console.log(deck);
 }
@@ -231,37 +235,84 @@ function callFindTopCard() {
 }
 
 function compareScore() {
+    calPlayerScore();
+    callFindTopCard();
     let topPlayer = new Players();
-    let top = useres[0].getPlayerScore();
+    let topScore = useres[0].getPlayerScore();
     // let indexTop = 0;
     let topSuit = useres[0].findTopCard().getCardSuitScore();
+    let topSuitSpecial = useres[0].findTopCard().getSpecialCardValue()
     let nameTop = useres[0].getPlayerName();
     for (let x = 1; x < useres.length; x++) {
-        if (top === useres[x].getPlayerScore()){
-            if (topSuit < useres[x].findTopCard().getCardSuitScore()){
+        if (topScore === useres[x].getPlayerScore()) {
+            if (topSuit === useres[x].findTopCard().getCardSuitScore()) {
+                if (topSuitSpecial < useres[x].findTopCard().getSpecialCardValue()) {
+                    topSuitSpecial = useres[x].findTopCard().getSpecialCardValue();
+                    topSuit = useres[x].findTopCard().getCardSuitScore();
+                    topScore = useres[x].getPlayerScore();
+                    nameTop = useres[x].getPlayerName();
+                    topPlayer.setPlayerName(nameTop);
+                    topPlayer.setPlayerScore(topScore);
+                } else {
+                    topPlayer.setPlayerName(nameTop);
+                    topPlayer.setPlayerScore(topScore);
+                }
+            } else if (topSuit < useres[x].findTopCard().getCardSuitScore()) {
                 topSuit = useres[x].findTopCard().getCardSuitScore();
-                top = useres[x].getPlayerScore();
+                topScore = useres[x].getPlayerScore();
                 nameTop = useres[x].getPlayerName();
                 topPlayer.setPlayerName(nameTop);
-            } else topPlayer.setPlayerName(nameTop);
-        } else if (top < useres[x].getPlayerScore()) {
-            top = useres[x].getPlayerScore();
+                topPlayer.setPlayerScore(topScore);
+            } else {
+                topPlayer.setPlayerName(nameTop);
+                topPlayer.setPlayerScore(topScore);
+            }
+        } else if (topScore < useres[x].getPlayerScore()) {
+            topScore = useres[x].getPlayerScore();
             nameTop = useres[x].getPlayerName();
-            topPlayer.setPlayerName(nameTop)
-        } else topPlayer.setPlayerName(nameTop)
+            topPlayer.setPlayerName(nameTop);
+            topPlayer.setPlayerScore(topScore);
+        } else {
+            topPlayer.setPlayerName(nameTop);
+            topPlayer.setPlayerScore(topScore);
+        }
     }
-    console.log(topPlayer)
-    return topPlayer
+    console.log(topPlayer);
+    return topPlayer;
 }
 
-function calMoney(){
-    compareScore();
-    let money;
-    for (x=0;x<useres.length;x++){
-        money = useres[x].playerMoney.getPlayerMoney()
-    }
-}
-function testPerfomance(){
+
+// topSuit = useres[x].findTopCard().getCardSuitScore();
+// top = useres[x].getPlayerScore();
+// nameTop = useres[x].getPlayerName();
+// topPlayer.setPlayerName(nameTop);
+// topPlayer.setPlayerScore(top);
+//             } else {
+//                 topPlayer.setPlayerName(nameTop);
+//                 topPlayer.setPlayerScore(top);
+//             }
+//         } else if (top < useres[x].getPlayerScore()) {
+//             top = useres[x].getPlayerScore();
+//             nameTop = useres[x].getPlayerName();
+//             topPlayer.setPlayerName(nameTop);
+//             topPlayer.setPlayerScore(top);
+//         } else {
+//             topPlayer.setPlayerName(nameTop);
+//             topPlayer.setPlayerScore(top);
+//         }
+//     }
+//     console.log(topPlayer)
+//     return topPlayer
+// }
+
+// function calMoney(){
+//     if
+//     let money;
+//     for (x=0;x<useres.length;x++){
+//         money = useres[x].playerMoney.getPlayerMoney()
+//     }
+// }
+function testPerfomance() {
     makeNewDeck();
     dealCards();
     callFindTopCard();
