@@ -3,17 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        table, tr, td, th {
+            border: solid;
+        }
+    </style>
 </head>
 <body>
-<input type="button" value="Create New Deck" onclick="makeNewDeck()">
-<input type="button" value="New Player" onclick="newPlayer()">
-<input type="button" value="Deal cards and make pot" onclick="dealCards()">
-<input type="button" value="Calculate" onclick="calPlayerScore()">
-<input type="button" value="Find the top card from all player" onclick="callFindTopCard()">
-<input type="button" value="Top player" onclick="compareScore()">
-<input type="button" value="Cal money" onclick="calMoney()">
+<h1 style="text-align: center"> S88 ~ NHÀ CÁI ĐẾN TỪ CODEGYM </h1>
+<hr>
+<div style="text-align: center">
+    <table>
+        <tr>
+            <td style="width: 500px"><input type="button" value="Ván mới"></td>
+            <td rowspan="4" style="width:1000px">
+                <canvas id="myCanvas" width="800" height="370"></canvas>
+            </td>
+            <td style="width: 500px"><input type="button" value="Hiện bảng xếp hạng"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Bộ bài mới"></td>
+            <td><input type="button" value="Hiện lá bài mạnh nhất"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Chia bài"></td>
+            <td><input type="button" value="Hiện tiền mỗi người chơi"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="Kết quả"></td>
+            <td><input type="button" value="Chơi nhanh"></td>
+        </tr>
+    </table>
+</div>
+<hr>
+<table>
+    <tr>
+        <td>Name</td>
+        <td>Money</td>
+        <td>Name</td>
+        <td>Money</td>
+        <td>Name</td>
+        <td>Money</td>
+        <td>Name</td>
+        <td>Money</td>
+        <td>Name</td>
+        <td>Money</td>
+        <td>Name</td>
+        <td>Money</td>
+    </tr>
+    <tr>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá</td>
+        <td>Lá mạnh nhất</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <canvas id="canvasPlayer1" width="245" height="150"></canvas>
+        </td>
+        <td colspan="2">
+            <canvas id="canvasPlayer2" width="245" height="150"></canvas>
+        </td>
+        <td colspan="2">
+            <canvas id="canvasPlayer3" width="245" height="150"></canvas>
+        </td>
+        <td colspan="2">
+            <canvas id="canvasPlayer4" width="245" height="150"></canvas>
+        </td>
+        <td colspan="2">
+            <canvas id="canvasPlayer5" width="245" height="150"></canvas>
+        </td>
+        <td colspan="2">
+            <canvas id="canvasPlayer6" width="245" height="150"></canvas>
+        </td>
+    </tr>
+</table>
 
-<input type="button" value="Test" onclick="testPerfomance()">
+
+<!--<input type="button" value="Create New Deck" onclick="makeNewDeck()">-->
+<!--<input type="button" value="New Player" onclick="newPlayer()">-->
+<!--<input type="button" value="Deal cards and make pot" onclick="dealCards()">-->
+<!--<input type="button" value="Calculate" onclick="calPlayerScore()">-->
+<!--<input type="button" value="Find the top card from all player" onclick="callFindTopCard()">-->
+<!--<input type="button" value="Top player" onclick="compareScore()">-->
+<!--<input type="button" value="Cal money" onclick="calMoney()">-->
+
+<!--<input type="button" value="Test" onclick="testPerfomance()">-->
 </body>
 <script src="../Javascript/core_function.js"></script>
+<script src="../PokerCanvas/Tairraos_Poker.JS/source/poker.js"></script>
+<script src="../Javascript/css_canvas.js"></script>
 </html>

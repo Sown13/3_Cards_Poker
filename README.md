@@ -52,3 +52,7 @@ III/ Các thuật toán và kỹ thuật quan trọng:
    + Dùng vòng lặp for để thực hiện chia bài cho các người chơi
 - Tính điểm, Tính tiền và quyết định người thắng:
    + Dùng các câu lệnh điều kiện if, else if để quyết định
+
+IV/ Bản quyền:
+
+- Vẽ bài poker: sử dụng project của https://tairraos.github.io/Poker.JS/ để vẽ

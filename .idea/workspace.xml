@@ -5,9 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Image/Layout.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Javascript/css_canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/License.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/bower.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/build/build.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/build/yuicompressor-2.4.7.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/demo/demo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/demo/demo_chs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/demo/sprite.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/demo/sprite_chs.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/cards.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/cardsample.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/cardsmask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/cardsprite.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/cardsprite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/old_version/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/release/poker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/number.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/poker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/poker.optimized.99.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/poker.optimized.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/PokerCanvas/Tairraos_Poker.JS/source/poker.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +93,7 @@
       <workItem from="1678417412048" duration="21151000" />
       <workItem from="1678450991422" duration="16817000" />
       <workItem from="1678496121729" duration="7845000" />
-      <workItem from="1678517407498" duration="7521000" />
+      <workItem from="1678517407498" duration="14121000" />
     </task>
     <servers />
   </component>
