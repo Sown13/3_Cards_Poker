@@ -35,7 +35,8 @@ III/ Các thuật toán và kỹ thuật quan trọng:
 
 - Class,Object: Quy định các thuộc tính, method của lá bài và người chơi
 - Tạo người chơi:
-   + Sử dụng mảng chứa các Object thuộc lớp Players
+   + Sử dụng mảng chứa các Object thuộc lớp Players được khởi tạo ( useres )
+   + Sử dụng mảng chứa các Object là các Player thua cuộc ( useresRemoved )
 - Tạo bộ bài mới:
    + Tạo 1 mảng chứa bộ bài
    + Tạo 4 mảng chứa thuộc tính của lá bài : Giá trị tính điểm của lá bài// Tên chất bài // Giá trị của chất bài //

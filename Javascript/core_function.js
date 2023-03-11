@@ -177,7 +177,6 @@ function dealCards() {
         useres[x].playerDeck = [];
         for (i = 0; i < 3; i++) {
             let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
-            console.log(cardIndexRemove);
             tempDeck.push(deck[cardIndexRemove]);
             useres[x].playerDeck = tempDeck;
             deck.splice(cardIndexRemove, 1)
@@ -188,7 +187,6 @@ function dealCards() {
     callFindTopCard();
     console.log(useres);
     console.log(deck);
-    console.log(moneyPot);
 }
 
 function calPlayerScore() {
@@ -212,7 +210,6 @@ function take2ndDiggit(number) {
 function callFindTopCard() {
     for (let x = 0; x < useres.length; x++) {
         useres[x].findTopCard();
-        console.log(useres[x].findTopCard())
     }
 }
 
@@ -262,7 +259,11 @@ function compareScore() {
         }
     }
     console.log(topPlayer);
-    return topPlayer;
+    topPlayer.setPlayerName(nameTop);
+    topPlayer.setPlayerScore(topScore);
+    calMoney();
+    checkMoney();
+    console.log(useres)
 }
 
 /// idea: thêm ID người chơi, sẽ không lo vấn đề 2 người chơi cùng tên.
@@ -273,12 +274,22 @@ function calMoney(){
             tempWallet += moneyPot;
             useres[x].setPlayerMoney(tempWallet);
             moneyPot = 0;
-            console.log(useres);
             break;
         }
     }
 }
 
+let useresRemoved = [];
+function checkMoney(){
+    let loserPlayer = new Players();
+    for(let x=0;x<useres.length;x++){
+        if ( useres[x].playerMoney <= 0){
+            loserPlayer = useres[x];
+            useres.splice(x,1);
+            useresRemoved.push(loserPlayer);
+        }
+    } console.log(useresRemoved)
+}
 
 function testPerfomance() {
     makeNewDeck();
@@ -287,4 +298,8 @@ function testPerfomance() {
     compareScore();
     calMoney();
     console.log(useres)
+}
+
+function display() {
+
 }
