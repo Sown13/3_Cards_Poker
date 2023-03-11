@@ -97,13 +97,13 @@ class Players {
         this.playerName = name;
     }
 
-    setPlayerDeck(arrayNew) {
-        this.playerDeck = arrayNew;
-    }
+    // setPlayerDeck(arrayNew) {
+    //     this.playerDeck = arrayNew;
+    // }
 
-    getPlayerDeck() {
-        return this.playerDeck;
-    }
+    // getPlayerDeck() {
+    //     return this.playerDeck;
+    // }
 
     findTopCard() {
         let topCard = new Cards();
@@ -139,23 +139,13 @@ class Players {
         }
         return topCard;
     }
-
-    // moneyCal() {
-    //     compareScore();
-    //     let wallet = this.playerMoney.getPlayerMoney()
-    //     if (this.playerName === topPlayer.playerName) {
-    //         wallet += betRate * (useres.length - 1);
-    //         this.playerMoney.setPlayerMoney(wallet);
-    //     } else {
-    //         wallet -= betRate;
-    //         this.playerMoney.setPlayerMoney(wallet);
-    //     }
-    // }
 }
 
 let useres = [];
 let betRate;
 let moneyPot;
+
+
 function newPlayer() {
     useres = [];
     useres.length = parseInt(prompt("Bạn muốn chơi bao nhiêu người? (tối đa 12 người Plz~)"));
@@ -177,11 +167,13 @@ function newPlayer() {
 
 function dealCards() {
     let countCardLeft = deck.length;
-    console.log(countCardLeft)
-    let numPlayer = useres.length;
+    console.log(countCardLeft);
     let i = 0;
-    for (let x = 0; x < numPlayer; x++) {
+    for (let x = 0; x < useres.length; x++) {
         let tempDeck = [];
+        let wallet = useres[x].getPlayerMoney();
+        let walletLeft = wallet - betRate;
+        useres[x].setPlayerMoney(walletLeft);
         useres[x].playerDeck = [];
         for (i = 0; i < 3; i++) {
             let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
@@ -191,10 +183,12 @@ function dealCards() {
             deck.splice(cardIndexRemove, 1)
         }
     }
+    moneyPot = betRate * useres.length;
     calPlayerScore();
     callFindTopCard();
     console.log(useres);
     console.log(deck);
+    console.log(moneyPot);
 }
 
 function calPlayerScore() {
@@ -231,7 +225,7 @@ function compareScore() {
     let topScore = useres[0].getPlayerScore();
     // let indexTop = 0;
     let topSuit = useres[0].findTopCard().getCardSuitScore();
-    let topSuitSpecial = useres[0].findTopCard().getSpecialCardValue()
+    let topSuitSpecial = useres[0].findTopCard().getSpecialCardValue();
     let nameTop = useres[0].getPlayerName();
     for (let x = 1; x < useres.length; x++) {
         if (topScore === useres[x].getPlayerScore()) {
@@ -271,10 +265,26 @@ function compareScore() {
     return topPlayer;
 }
 
+/// idea: thêm ID người chơi, sẽ không lo vấn đề 2 người chơi cùng tên.
+function calMoney(){
+    for(let x=0;x<useres.length;x++){
+        if(useres[x].getPlayerName() === topPlayer.getPlayerName()){
+            let tempWallet = useres[x].getPlayerMoney();
+            tempWallet += moneyPot;
+            useres[x].setPlayerMoney(tempWallet);
+            moneyPot = 0;
+            console.log(useres);
+            break;
+        }
+    }
+}
+
+
 function testPerfomance() {
     makeNewDeck();
     dealCards();
     callFindTopCard();
     compareScore();
+    calMoney();
     console.log(useres)
 }

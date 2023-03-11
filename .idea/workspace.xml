@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="" />
+    <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,7 +68,8 @@
       <workItem from="1678373349146" duration="5545000" />
       <workItem from="1678417412048" duration="21151000" />
       <workItem from="1678450991422" duration="16817000" />
-      <workItem from="1678496121729" duration="5801000" />
+      <workItem from="1678496121729" duration="7845000" />
+      <workItem from="1678517407498" duration="6045000" />
     </task>
     <servers />
   </component>
