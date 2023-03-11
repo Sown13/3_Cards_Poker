@@ -7,6 +7,7 @@
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,8 @@
       <workItem from="1678151351923" duration="1061000" />
       <workItem from="1678373349146" duration="5545000" />
       <workItem from="1678417412048" duration="21151000" />
-      <workItem from="1678450991422" duration="16548000" />
+      <workItem from="1678450991422" duration="16817000" />
+      <workItem from="1678496121729" duration="4789000" />
     </task>
     <servers />
   </component>

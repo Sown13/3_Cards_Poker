@@ -46,7 +46,6 @@ let suitScores = [4, 3, 2, 1];
 let values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let specialValues = [10, 2, 3, 4, 5, 6, 7, 8, 9];
 let deck = [];
-let betRate;
 
 function makeNewDeck() {
     deck = [];
@@ -140,10 +139,23 @@ class Players {
         }
         return topCard;
     }
+
+    // moneyCal() {
+    //     compareScore();
+    //     let wallet = this.playerMoney.getPlayerMoney()
+    //     if (this.playerName === topPlayer.playerName) {
+    //         wallet += betRate * (useres.length - 1);
+    //         this.playerMoney.setPlayerMoney(wallet);
+    //     } else {
+    //         wallet -= betRate;
+    //         this.playerMoney.setPlayerMoney(wallet);
+    //     }
+    // }
 }
 
 let useres = [];
-
+let betRate;
+let moneyPot;
 function newPlayer() {
     useres = [];
     useres.length = parseInt(prompt("Bạn muốn chơi bao nhiêu người? (tối đa 12 người Plz~)"));
@@ -161,6 +173,7 @@ function newPlayer() {
 }
 
 // Make algorithm about Random math and rate
+
 
 function dealCards() {
     let countCardLeft = deck.length;
@@ -201,31 +214,6 @@ function take2ndDiggit(number) {
     return c;
 }
 
-// function findTopCard() {
-//     let topCard = new Cards();
-//     let topSuitScore = parseInt(useres.playerDeck[0].getCardSuitScore());
-//     let topSuit = useres.playerDeck[0].getCardSuit();
-//     let topCardValue = parseInt(useres.playerDeck[0].getCardValue())
-//     for (let y = 1; y < 3; y++) {
-//         if (topSuitScore === parseInt(useres.playerDeck[y].getCardSuitScore())) {
-//             if (topCardValue < useres.playerDeck[y].getCardValue()) {
-//                 topCardValue = useres.playerDeck[y].getCardValue();
-//                 topSuit = useres.playerDeck[y].getCardSuit();
-//                 topSuitScore = useres.playerDeck[y].getCardSuitScore();
-//                 topCard.setCardValue(topCardValue);
-//                 topCard.setCardSuit(topSuit);
-//                 topCard.setCardSuitScore(topSuitScore);
-//             }
-//         } else if (topSuitScore < parseInt(useres.playerDeck[y].getCardSuitScore())){
-//             topSuitScore = parseInt(useres.playerDeck[y].getCardSuitScore());
-//             topCardValue = useres.playerDeck[y].getCardValue();
-//             topSuit = useres.playerDeck[y].getCardSuit();
-//             topCard.setCardValue(topCardValue);
-//             topCard.setCardSuit(topSuit);
-//             topCard.setCardSuitScore(topSuitScore);
-//         }
-//     } console.log(topCard)
-// }
 
 function callFindTopCard() {
     for (let x = 0; x < useres.length; x++) {
@@ -234,10 +222,12 @@ function callFindTopCard() {
     }
 }
 
+let topPlayer = new Players();
+
 function compareScore() {
     calPlayerScore();
     callFindTopCard();
-    let topPlayer = new Players();
+    // let topPlayer = new Players();
     let topScore = useres[0].getPlayerScore();
     // let indexTop = 0;
     let topSuit = useres[0].findTopCard().getCardSuitScore();
@@ -281,37 +271,6 @@ function compareScore() {
     return topPlayer;
 }
 
-
-// topSuit = useres[x].findTopCard().getCardSuitScore();
-// top = useres[x].getPlayerScore();
-// nameTop = useres[x].getPlayerName();
-// topPlayer.setPlayerName(nameTop);
-// topPlayer.setPlayerScore(top);
-//             } else {
-//                 topPlayer.setPlayerName(nameTop);
-//                 topPlayer.setPlayerScore(top);
-//             }
-//         } else if (top < useres[x].getPlayerScore()) {
-//             top = useres[x].getPlayerScore();
-//             nameTop = useres[x].getPlayerName();
-//             topPlayer.setPlayerName(nameTop);
-//             topPlayer.setPlayerScore(top);
-//         } else {
-//             topPlayer.setPlayerName(nameTop);
-//             topPlayer.setPlayerScore(top);
-//         }
-//     }
-//     console.log(topPlayer)
-//     return topPlayer
-// }
-
-// function calMoney(){
-//     if
-//     let money;
-//     for (x=0;x<useres.length;x++){
-//         money = useres[x].playerMoney.getPlayerMoney()
-//     }
-// }
 function testPerfomance() {
     makeNewDeck();
     dealCards();
