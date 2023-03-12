@@ -1,6 +1,7 @@
 let context = document.getElementById("myCanvas").getContext("2d");
 // canvas.drawPokerCard(10, 10, 80, 'hearts', '6');
 let positionX = [0, 90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1140, 1230, 1320, 1410];
+let positionX2 = [0, 90, 180, 270, 360, 450, 540, 630, 720, 810, 900, 990, 1080, 1170, 1260, 1350,1440];
 let positionY = [0, 90, 180, 270];
 // let size = [60, 80]
 let suitCardCanvas = ['hearts', 'diamonds', 'spades', 'clubs'];
@@ -13,6 +14,8 @@ for (let c = 0; c < 4; c++) {
 for (let c = 12; c < 16; c++) {
     contextHead.drawPokerCard(positionX[c], 0, 120, suitCardCanvas[Math.floor(Math.random() * 4)], cardNum[Math.floor(Math.random() * 4)])
 }
+
+//HEADER--------------------
 contextHead.fillStyle = "#FFD700";
 contextHead.font = `35px Papyrus`;
 contextHead.fillText(`-CODE88-`, 530, 40);
@@ -22,6 +25,14 @@ contextHead.fillText(`NHÀ CÁI UY TÍN ĐẾN TỪ`, 410, 100);
 // contextHead.fillText(`CODEGYM`,830,100);
 let logoCodegym = document.getElementById("logoCodegym");
 contextHead.drawImage(logoCodegym, 830, 50);
+
+//FOOTER--------------------
+
+let contextFoot = document.getElementById("footCanvas").getContext("2d");
+for (let c = 0; c < 17; c++) {
+    contextFoot.drawPokerCard(positionX2[c], 0, 80, suitCardCanvas[Math.floor(Math.random() * 4)], 'joker')
+}
+//--------------------------------------------------------------
 
 function drawWelcome() {
     context.clearRect(0, 0, 800, 370);
@@ -41,7 +52,6 @@ function drawWelcome() {
 }
 
 
-//--------------------------------------------------------------
 function canvasNewDeck() {
     context.clearRect(0, 0, 800, 370);
     for (let y = 0; y < 4; y++) {
