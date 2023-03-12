@@ -41,7 +41,7 @@ class Cards {
 
 
 // Make a new deck
-let suits = ['Diamond', 'Heart', 'Club', 'Spade'];
+let suits = ['diamonds', 'hearts', 'clubs', 'spades'];
 let suitScores = [4, 3, 2, 1];
 let values = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 let specialValues = [10, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -60,6 +60,7 @@ function makeNewDeck() {
             deck.push(cardInDeck);
         }
     }
+    canvasNewDeck();
     console.log(deck)
 }
 
@@ -148,7 +149,10 @@ let moneyPot;
 
 function newPlayer() {
     useres = [];
-    useres.length = parseInt(prompt("Bạn muốn chơi bao nhiêu người? (tối đa 12 người Plz~)"));
+    useres.length = Math.abs(parseInt(prompt("Bạn muốn chơi bao nhiêu người? (tối đa 6)")));
+    if (useres.length > 6) {
+        useres.length = 6
+    }
     for (let x = 0; x < useres.length; x++) {
         let player = new Players();
         let playerName = prompt(`Nhập tên người chơi thứ ${x + 1}`);
@@ -159,6 +163,7 @@ function newPlayer() {
         useres[x] = player;
     }
     betRate = parseInt(prompt("Nhập số tiền bạn muốn đặt cược mỗi lần chơi"));
+    createNameAndMoney();
     console.log(useres)
 }
 
@@ -175,16 +180,24 @@ function dealCards() {
         let walletLeft = wallet - betRate;
         useres[x].setPlayerMoney(walletLeft);
         useres[x].playerDeck = [];
+        let contextPlayer = document.getElementById(`canvasPlayer${x + 1}`).getContext("2d");
         for (i = 0; i < 3; i++) {
             let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
             tempDeck.push(deck[cardIndexRemove]);
             useres[x].playerDeck = tempDeck;
+            let tempValue = useres[x].playerDeck[i].getCardValue();
+            if (tempValue === 1) {
+                tempValue = 'a'
+            }
+            contextPlayer.drawPokerCard(60 * i + 30, 30, 80, useres[x].playerDeck[i].getCardSuit(), tempValue)
             deck.splice(cardIndexRemove, 1)
         }
     }
+    // canvasBackSide();
     moneyPot = betRate * useres.length;
     calPlayerScore();
     callFindTopCard();
+    showScoreAndTopCard();
     console.log(useres);
     console.log(deck);
 }
@@ -263,13 +276,15 @@ function compareScore() {
     topPlayer.setPlayerScore(topScore);
     calMoney();
     checkMoney();
+    createNameAndMoney();
+    displayToBoard();
     console.log(useres)
 }
 
 /// idea: thêm ID người chơi, sẽ không lo vấn đề 2 người chơi cùng tên.
-function calMoney(){
-    for(let x=0;x<useres.length;x++){
-        if(useres[x].getPlayerName() === topPlayer.getPlayerName()){
+function calMoney() {
+    for (let x = 0; x < useres.length; x++) {
+        if (useres[x].getPlayerName() === topPlayer.getPlayerName()) {
             let tempWallet = useres[x].getPlayerMoney();
             tempWallet += moneyPot;
             useres[x].setPlayerMoney(tempWallet);
@@ -280,26 +295,91 @@ function calMoney(){
 }
 
 let useresRemoved = [];
-function checkMoney(){
+
+function checkMoney() {
     let loserPlayer = new Players();
-    for(let x=0;x<useres.length;x++){
-        if ( useres[x].playerMoney <= 0){
+    for (let x = 0; x < useres.length; x++) {
+        if (useres[x].playerMoney <= 0) {
             loserPlayer = useres[x];
-            useres.splice(x,1);
+            useres.splice(x, 1);
             useresRemoved.push(loserPlayer);
+            let contextPlayer = document.getElementById(`canvasPlayer${useres.length + 1}`).getContext("2d");
+            contextPlayer.clearRect(0, 0, 245, 150);
+            document.getElementById(`nameP${useres.length + 1}`).innerHTML = ``;
+            document.getElementById(`moneyP${useres.length + 1}`).innerHTML = ``;
+            document.getElementById(`sum${useres.length + 1}`).innerHTML = ``;
+            document.getElementById(`topCard${useres.length + 1}`).innerHTML = ``;
         }
-    } console.log(useresRemoved)
+    }
+    console.log(useresRemoved)
 }
 
-function testPerfomance() {
+// function checkFinalWinner() {
+//     if (useres.length === 1) {
+//         context.clearRect(0, 0, 800, 370);
+//         context.fillStyle = `#00FFFF`;
+//         context.font = "50px Arial";
+//         context.fillText(`Final Winner: ${useres[0].getPlayerName()}`, 30, 200);
+//     }
+// }
+
+function playQuick() {
     makeNewDeck();
     dealCards();
-    callFindTopCard();
     compareScore();
-    calMoney();
     console.log(useres)
 }
 
-function display() {
-
+function createNameAndMoney() {
+    for (let x = 0; x < useres.length; x++) {
+        document.getElementById(`nameP${x + 1}`).innerHTML = useres[x].getPlayerName();
+        document.getElementById(`moneyP${x + 1}`).innerHTML = useres[x].getPlayerMoney();
+    }
 }
+
+function showScoreAndTopCard() {
+    for (let x = 0; x < useres.length; x++) {
+        document.getElementById(`sum${x + 1}`).innerHTML = useres[x].getPlayerScore();
+        document.getElementById(`topCard${x + 1}`).innerHTML = `${useres[x].findTopCard().getSpecialCardValue()} ${useres[x].findTopCard().getCardSuit()}`;
+    }
+}
+
+function displayToBoard() {
+    // document.getElementById(`myCanvas`).innerHTML = `${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()}`;
+    if (useres.length === 1) {
+        context.clearRect(0, 0, 800, 370);
+        context.fillStyle = `#00FFFF`;
+        context.font = "50px Arial";
+        context.fillText(`Final Winner: ${useres[0].getPlayerName()}`, 30, 200);
+    } else {
+        context.clearRect(0, 0, 800, 370);
+        context.fillStyle = `#00FFFF`;
+        context.font = "50px Arial";
+        context.fillText(`Round Winner: ${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()} điểm`, 30, 200);
+    }
+}
+
+let rank = [];
+
+// function rankPlayer() {
+//     rank = [];
+//     for (let x = 0; x < useres.length; x++) {
+//         rank[x] = useres[x].getPlayerMoney();
+//     }
+//     rank.sort();
+// }
+//
+// function displayRank(){
+//     rankPlayer();
+//     let display = ``;
+//     for (let x=0;x<rank.length;x++){
+//         display += `Rank 1 - ${useres[x].getPlayerName()}`
+//     }
+// }
+
+document.getElementById("newGame").addEventListener("click", newPlayer);
+document.getElementById("newDeck").addEventListener("click", makeNewDeck);
+document.getElementById("dealCard").addEventListener("click", dealCards);
+document.getElementById("dealCard").addEventListener("click", dealCards);
+document.getElementById("result").addEventListener("click", compareScore);
+document.getElementById("quickPlay").addEventListener("click", playQuick);

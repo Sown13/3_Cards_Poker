@@ -3,67 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        table, tr, td, th {
-            border: solid;
-        }
-    </style>
+    <link href="../CSS/css_game_layout.css" rel="stylesheet">
 </head>
 <body>
-<h1 style="text-align: center"> S88 ~ NHÀ CÁI ĐẾN TỪ CODEGYM </h1>
+<h1 style="text-align: center"> CODE88 ~ NHÀ CÁI ĐẾN TỪ CODEGYM </h1>
 <hr>
 <div style="text-align: center">
     <table>
         <tr>
-            <td style="width: 500px"><input type="button" value="Ván mới"></td>
+            <td style="width: 500px"><input type="button" value="Ván mới" id="newGame" class="button"></td>
             <td rowspan="4" style="width:1000px">
                 <canvas id="myCanvas" width="800" height="370"></canvas>
             </td>
-            <td style="width: 500px"><input type="button" value="Hiện bảng xếp hạng"></td>
+            <td style="width: 500px"><input type="button" value="Bảng xếp hạng" class="button"></td>
         </tr>
         <tr>
-            <td><input type="button" value="Bộ bài mới"></td>
-            <td><input type="button" value="Hiện lá bài mạnh nhất"></td>
+            <td><input type="button" value="Bộ bài mới" id="newDeck" class="button"></td>
+            <td><input type="button" value="Lá mạnh nhất" class="button"></td>
         </tr>
         <tr>
-            <td><input type="button" value="Chia bài"></td>
-            <td><input type="button" value="Hiện tiền mỗi người chơi"></td>
+            <td><input type="button" value="Chia bài" id="dealCard" class="button"></td>
+            <td><input type="button" value="Money Rank" class="button"></td>
         </tr>
         <tr>
-            <td><input type="button" value="Kết quả"></td>
-            <td><input type="button" value="Chơi nhanh"></td>
+            <td><input type="button" value="Kết quả" id="result" class="button"></td>
+            <td><input type="button" value="Chơi nhanh" class="button" id="quickPlay"></td>
         </tr>
     </table>
 </div>
 <hr>
 <table>
     <tr>
-        <td>Name</td>
-        <td>Money</td>
-        <td>Name</td>
-        <td>Money</td>
-        <td>Name</td>
-        <td>Money</td>
-        <td>Name</td>
-        <td>Money</td>
-        <td>Name</td>
-        <td>Money</td>
-        <td>Name</td>
-        <td>Money</td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP1"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP1"></span></span></td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP2"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP2"></span></span></td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP3"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP3"></span></span></td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP4"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP4"></span></span></td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP5"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP5"></span></span></td>
+        <td>Name : <span style="color:red;text-align: right"> <span id="nameP6"></span></span></td>
+        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP6"></span></span></td>
     </tr>
     <tr>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
-        <td>Tổng 3 lá</td>
-        <td>Lá mạnh nhất</td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum1"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard1"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum2"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard2"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum3"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard3"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum4"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard4"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum5"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard5"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum6"></span></span></td>
+        <td>Top card:<span style="color:red;text-align: right"><span id="topCard6"></span></span></td>
+
     </tr>
     <tr>
         <td colspan="2">
@@ -87,18 +84,8 @@
     </tr>
 </table>
 
-
-<!--<input type="button" value="Create New Deck" onclick="makeNewDeck()">-->
-<!--<input type="button" value="New Player" onclick="newPlayer()">-->
-<!--<input type="button" value="Deal cards and make pot" onclick="dealCards()">-->
-<!--<input type="button" value="Calculate" onclick="calPlayerScore()">-->
-<!--<input type="button" value="Find the top card from all player" onclick="callFindTopCard()">-->
-<!--<input type="button" value="Top player" onclick="compareScore()">-->
-<!--<input type="button" value="Cal money" onclick="calMoney()">-->
-
-<!--<input type="button" value="Test" onclick="testPerfomance()">-->
 </body>
 <script src="../Javascript/core_function.js"></script>
 <script src="../PokerCanvas/Tairraos_Poker.JS/source/poker.js"></script>
-<script src="../Javascript/css_canvas.js"></script>
+<script src="../Javascript/canvas.js"></script>
 </html>

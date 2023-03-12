@@ -1,0 +1,26 @@
+.button {
+    background-color: crimson;
+    color: white;
+    padding: 10px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: ruby-text;
+    font-size: 25px;
+    border-width: 15px;
+    width: 100%;
+}
+
+.button:hover{
+    transform: scale(1.03);
+}
+
+
+table, tr, td, th {
+    border: solid;
+    color: azure;
+}
+
+body {background-color: black;
+    color: azure;
+}
+
