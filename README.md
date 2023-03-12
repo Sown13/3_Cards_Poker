@@ -56,3 +56,6 @@ III/ Các thuật toán và kỹ thuật quan trọng:
 IV/ Bản quyền:
 
 - Vẽ bài poker: sử dụng project của https://tairraos.github.io/Poker.JS/ để vẽ
+
+
+// Note for me: Chuyển canvas sang img phần footer để làm các lá bài xoay xoay (keyframe)
