@@ -164,6 +164,7 @@ function newPlayer() {
     }
     betRate = parseInt(prompt("Nhập số tiền bạn muốn đặt cược mỗi lần chơi"));
     createNameAndMoney();
+    drawWelcome();
     console.log(useres)
 }
 
@@ -333,7 +334,7 @@ function playQuick() {
 function createNameAndMoney() {
     for (let x = 0; x < useres.length; x++) {
         document.getElementById(`nameP${x + 1}`).innerHTML = useres[x].getPlayerName();
-        document.getElementById(`moneyP${x + 1}`).innerHTML = useres[x].getPlayerMoney();
+        document.getElementById(`moneyP${x + 1}`).innerHTML = `${useres[x].getPlayerMoney()}VND`;
     }
 }
 

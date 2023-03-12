@@ -5,12 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/CSS/css_game_layout.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/5163.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/background_main.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/background_main_resized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/background_main_resized_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_jean.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_jean_resized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_jean_resized_removedbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_klee.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_klee_reload.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_klee_removedbg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/character_main_klee_resized.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/fischl_1.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/genshin_tcg_header.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/headline_genshin_1-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/headline_genshin_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/headline_genshin_2-removebg-preview.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/headline_genshin_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/logo_codegym.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/qiqi_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/qiqi_1_50x30.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/qiqi_1_80.50.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Image/yugioh_pose_1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/css_game_layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/css_game_layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javascript/css_canvas.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +94,7 @@
       <workItem from="1678450991422" duration="16817000" />
       <workItem from="1678496121729" duration="7845000" />
       <workItem from="1678517407498" duration="14463000" />
-      <workItem from="1678545758788" duration="18365000" />
+      <workItem from="1678545758788" duration="27606000" />
     </task>
     <servers />
   </component>

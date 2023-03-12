@@ -22,5 +22,6 @@ table, tr, td, th {
 
 body {background-color: black;
     color: azure;
+    margin: 0;
 }
 
