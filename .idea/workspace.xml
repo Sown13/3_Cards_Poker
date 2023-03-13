@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CSS/css_game_layout.css" beforeDir="false" afterPath="$PROJECT_DIR$/CSS/css_game_layout.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Learning/Codegym_Project_Git/Practice_JS_OOP",
+    "last_opened_file_path": "D:/Learning/Codegym_Project_Git/Practice_JS_Function",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,14 +72,39 @@
       <workItem from="1678450991422" duration="16817000" />
       <workItem from="1678496121729" duration="7845000" />
       <workItem from="1678517407498" duration="14463000" />
-      <workItem from="1678545758788" duration="29051000" />
+      <workItem from="1678545758788" duration="29911000" />
+      <workItem from="1678637361767" duration="41000" />
+      <workItem from="1678638044461" duration="2422000" />
+      <workItem from="1678674936883" duration="12750000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Javascript/core_function.js</url>
+          <line>390</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

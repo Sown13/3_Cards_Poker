@@ -25,3 +25,17 @@ body {background-color: black;
     margin: 0;
 }
 
+.footCanvas {
+    position: relative;
+    animation: footCanvas 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes footCanvas {
+    from {left:0;transform: scaleX(1);
+    }
+    to {right:0; transform: scaleX(-1);
+    }
+}
+/*img:hover {*/
+/*    transform: scaleX(-1);*/
+/*}*/

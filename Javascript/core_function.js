@@ -378,9 +378,15 @@ let rank = [];
 //     }
 // }
 
+function showMoneyBoard(){
+    
+}
+
+
 document.getElementById("newGame").addEventListener("click", newPlayer);
 document.getElementById("newDeck").addEventListener("click", makeNewDeck);
 document.getElementById("dealCard").addEventListener("click", dealCards);
 document.getElementById("dealCard").addEventListener("click", dealCards);
 document.getElementById("result").addEventListener("click", compareScore);
 document.getElementById("quickPlay").addEventListener("click", playQuick);
+

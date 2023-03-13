@@ -6,7 +6,11 @@
     <link href="../CSS/css_game_layout.css" rel="stylesheet">
 </head>
 <body>
-<h1 style="text-align: center;margin: 0"> <canvas id="headCanvas" width="1500" height="120"></canvas></h1>
+<div id="div1">
+<h1 style="text-align: center;margin: 0"> <canvas id="headCanvas" width="1500" height="120">
+    <canvas id="innerCanvas" width="300" height="400"></canvas>
+</canvas></h1>
+</div>
 <div style="text-align: center">
     <table>
         <tr>
@@ -14,7 +18,7 @@
             <td rowspan="4" style="width:1000px">
                 <canvas id="myCanvas" width="800" height="370"></canvas>
             </td>
-            <td style="width: 500px"><input type="button" value="Bảng xếp hạng" class="button"></td>
+            <td style="width: 500px"><input type="button" value="Danh sách người chơi" id="playerList" class="button"></td>
         </tr>
         <tr>
             <td><input type="button" value="Bộ bài mới" id="newDeck" class="button"></td>
@@ -22,7 +26,7 @@
         </tr>
         <tr>
             <td><input type="button" value="Chia bài" id="dealCard" class="button"></td>
-            <td><input type="button" value="Money Rank" class="button"></td>
+            <td><input type="button" value="Hướng dẫn chơi" id="howToPlay" class="button"></td>
         </tr>
         <tr>
             <td><input type="button" value="Kết quả" id="result" class="button"></td>
@@ -82,12 +86,18 @@
         </td>
     </tr>
 </table>
-<h1 style="text-align: center;margin: 0"> <canvas id="footCanvas" width="1500" height="90"></canvas></h1>
+<h1 style="text-align: center;margin: 0"> <canvas class="footCanvas" id="footCanvas" width="1500" height="90"></canvas></h1>
 
 <img src="../Image/logo_codegym.png" id="logoCodegym" style="display: none" alt="">
 <img src="../Image/welcome_board.png" id="welcome" style="display: none" alt="">
 
 <img src="../Image/sucrose_1.png" alt="" style="display: none">
+<img src="../Image/icon_albedo.png" id="icon1" alt="" style="display: none">
+<img src="../Image/icon_kazuha.jpg" id="icon2" alt="" style="display: none">
+<img src="../Image/icon_nilou.jpg" id="icon3" alt="" style="display: none">
+<img src="../Image/icon_bennet.png" id="icon4" alt="" style="display: none">
+<img src="../Image/icon_ayato.png" id="icon5" alt="" style="display: none">
+<img src="../Image/icon_alhaitham.png" id="icon6" alt="" style="display: none">
 </body>
 <script src="../Javascript/core_function.js"></script>
 <script src="../PokerCanvas/Tairraos_Poker.JS/source/poker.js"></script>
