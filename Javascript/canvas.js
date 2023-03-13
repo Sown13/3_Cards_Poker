@@ -78,7 +78,7 @@ function canvasNewDeck() {
         }
     }
 }
-
+//
 // let canvasPlayer = document.getElementById("").getContext("2d");
 // function canvasBackSide() {
 //     for (let y = 0; y < 4; y++) {
@@ -87,6 +87,7 @@ function canvasNewDeck() {
 //         }
 //     }
 // }
+
 
 function drawHowToPlay() {
     context.clearRect(0, 0, 800, 370);
@@ -103,7 +104,7 @@ function drawHowToPlay() {
     context.fillText(`Luật chơi như luật 3 cây bình thường (trừ việc tính tiền)`, 20, 240);
     context.fillText(`Qua mỗi vòng đấu, người chiến thắng sẽ nhận được số tiền cược của mỗi người chơi khác`, 20, 270);
     context.fillText(`Tiếp tục chơi cho đến khi tìm ra người chiến thắng cuối cùng (người duy nhất còn tiền)`, 20, 300);
-    context.fillText(`Tránh việc [chia bài] 2 lần mà không tính kết quả, tiền sẽ bị trừ 2 lần`, 20, 330);
+    context.fillText(`Tránh việc [chia bài] 2 lần mà không tính kết quả, tiền có thể bị trừ 2 lần`, 20, 330);
 }
 
 document.getElementById("howToPlay").addEventListener("click", drawHowToPlay);
@@ -155,6 +156,7 @@ for (let y = 0; y < 9; y++) {
         context.drawImage(background[i], 0, 0);
     }
 }
+
 
 document.getElementById("background").addEventListener("click", drawRandom);
 
