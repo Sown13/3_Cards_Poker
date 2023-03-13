@@ -104,6 +104,7 @@ document.getElementById("playerList").addEventListener("click",drawPlayerList);
 
 let iconPlayer = [];
 function drawIcon() {
+    iconPlayer = [];
     for (let x = 0; x < useres.length; x++) {
         iconPlayer[x] = document.getElementById(`icon${x+1}`)
         iconPlayer.push(iconPlayer[x])
@@ -113,3 +114,22 @@ function drawIcon() {
     }
 }
 
+function drawJoker() {
+    context.clearRect(0, 0, 800, 370);
+    context.drawPokerCard(90, 80, 200, suitCardCanvas[Math.floor(Math.random() * 4)], 'joker');
+    context.drawPokerCard(320, 80, 200, suitCardCanvas[Math.floor(Math.random() * 4)], 'joker');
+    context.drawPokerCard(550, 80, 200, suitCardCanvas[Math.floor(Math.random() * 4)], 'joker');
+}
+
+
+function drawRandom(){
+    iconPlayer = [];
+    for (let x = 0; x < 6; x++) {
+        iconPlayer[x] = document.getElementById(`icon${x+1}`);
+        iconPlayer.push(iconPlayer[x]);
+    context.clearRect(0, 0, 800, 370);
+    let i = Math.floor(Math.random()*6);
+    context.drawImage(iconPlayer[i],0,0)
+}}
+
+document.getElementById("checkLuck").addEventListener("click",drawRandom)

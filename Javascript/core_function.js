@@ -199,6 +199,7 @@ function dealCards() {
     calPlayerScore();
     callFindTopCard();
     showScoreAndTopCard();
+    drawJoker();
     console.log(useres);
     console.log(deck);
 }

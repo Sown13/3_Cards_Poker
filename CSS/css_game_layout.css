@@ -39,3 +39,16 @@ body {background-color: black;
 /*img:hover {*/
 /*    transform: scaleX(-1);*/
 /*}*/
+
+
+/*#myCanvas {*/
+/*    position:relative;*/
+/*    animation: myCanvas 4s;*/
+/*    animation-iteration-count: infinite;*/
+/*}*/
+/*@keyframes myCanvas {*/
+/*    from {left:0;transform: scaleX(1);*/
+/*    }*/
+/*    to {right:0; transform: scaleX(-1);*/
+/*    }*/
+/*}*/
