@@ -7,10 +7,10 @@
 </head>
 <body>
 <div id="div1">
-<h1 style="text-align: center;margin: 0">
-    <canvas id="headCanvas" width="1500" height="120">
-    </canvas>
-</h1>
+    <h1 style="text-align: center;margin: 0">
+        <canvas id="headCanvas" width="1500" height="120">
+        </canvas>
+    </h1>
 </div>
 <div style="text-align: center">
     <table>
@@ -19,11 +19,12 @@
             <td rowspan="4" style="width:1000px">
                 <canvas id="myCanvas" width="800" height="370"></canvas>
             </td>
-            <td style="width: 500px"><input type="button" value="Danh sách người chơi" id="playerList" class="button"></td>
+            <td style="width: 500px"><input type="button" value="Player List" id="playerList" class="button">
+            </td>
         </tr>
         <tr>
             <td><input type="button" value="Bộ bài mới" id="newDeck" class="button"></td>
-            <td><input type="button" value="Check your luck" class="button" id="checkLuck"></td>
+            <td><input type="button" value="Background" class="button" id="background"></td>
         </tr>
         <tr>
             <td><input type="button" value="Chia bài" id="dealCard" class="button"></td>
@@ -38,32 +39,32 @@
 <hr>
 <table>
     <tr>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP1"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP1"></span></span></td>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP2"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP2"></span></span></td>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP3"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP3"></span></span></td>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP4"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP4"></span></span></td>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP5"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP5"></span></span></td>
-        <td>Name : <span style="color:red;text-align: right"> <span id="nameP6"></span></span></td>
-        <td>Money : <span style="color:red;text-align: right"> <span id="moneyP6"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP1"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP1"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP2"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP2"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP3"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP3"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP4"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP4"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP5"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP5"></span></span></td>
+        <td>Name : <span style="color:aqua;text-align: right"> <span id="nameP6"></span></span></td>
+        <td>Money : <span style="color:aqua;text-align: right"> <span id="moneyP6"></span></span></td>
     </tr>
     <tr>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum1"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard1"></span></span></td>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum2"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard2"></span></span></td>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum3"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard3"></span></span></td>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum4"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard4"></span></span></td>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum5"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard5"></span></span></td>
-        <td>Tổng 3 lá:<span style="color:red;text-align: right"><span id="sum6"></span></span></td>
-        <td>Top card:<span style="color:red;text-align: right"><span id="topCard6"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum1"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard1"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum2"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard2"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum3"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard3"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum4"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard4"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum5"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard5"></span></span></td>
+        <td>Tổng 3 lá:<span style="color:aqua;text-align: right"><span id="sum6"></span></span></td>
+        <td>Top card:<span style="color:aqua;text-align: right"><span id="topCard6"></span></span></td>
 
     </tr>
     <tr>
@@ -87,18 +88,30 @@
         </td>
     </tr>
 </table>
-<h1 style="text-align: center;margin: 0"> <canvas class="footCanvas" id="footCanvas" width="1500" height="90"></canvas></h1>
+<p id="footerTable"></p>
+
 
 <img src="../Image/logo_codegym.png" id="logoCodegym" style="display: none" alt="">
 <img src="../Image/welcome_board.png" id="welcome" style="display: none" alt="">
 
 <img src="../Image/sucrose_1.png" alt="" style="display: none">
-<img src="../Image/icon_albedo.png" id="icon1" alt="" style="display: none">
-<img src="../Image/icon_kazuha.jpg" id="icon2" alt="" style="display: none">
-<img src="../Image/icon_nilou.jpg" id="icon3" alt="" style="display: none">
-<img src="../Image/icon_bennet.png" id="icon4" alt="" style="display: none">
-<img src="../Image/icon_ayato.png" id="icon5" alt="" style="display: none">
-<img src="../Image/icon_alhaitham.png" id="icon6" alt="" style="display: none">
+<img src="../Image/background_1.jpg" id="back1" alt="" style="display: none">
+<img src="../Image/background_2.jpg" id="back2" alt="" style="display: none">
+<img src="../Image/background_3.jpg" id="back3" alt="" style="display: none">
+<img src="../Image/background_4.jpg" id="back4" alt="" style="display: none">
+<img src="../Image/background_5.jpg" id="back5" alt="" style="display: none">
+<img src="../Image/background_6.jpg" id="back6" alt="" style="display: none">
+<img src="../Image/background_7.png" id="back7" alt="" style="display: none">
+<img src="../Image/background_8%20.jpg" id="back8" alt="" style="display: none">
+<img src="../Image/background_9.jpg" id="back9" alt="" style="display: none">
+
+<img src="../Image/icon_alhaitham.png" id="icon1" alt="" style="display: none">
+<img src="../Image/icon_ayato.png" id="icon2" alt="" style="display: none">
+<img src="../Image/icon_nilou_removedbg.png" id="icon3" alt="" style="display: none">
+<img src="../Image/icon_yelan.png" id="icon4" alt="" style="display: none">
+<img src="../Image/icon_albedo.png" id="icon5" alt="" style="display: none">
+<img src="../Image/icon_ningguang.png" id="icon6" alt="" style="display: none">
+
 </body>
 <script src="../Javascript/core_function.js"></script>
 <script src="../PokerCanvas/Tairraos_Poker.JS/source/poker.js"></script>

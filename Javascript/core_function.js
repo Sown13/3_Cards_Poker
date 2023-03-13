@@ -65,6 +65,11 @@ function makeNewDeck() {
 }
 
 // User~Player~PalyerDeck
+let iconPlayer = [];
+for (let x = 0; x < 6; x++) {
+    iconPlayer[x] = document.getElementById(`icon${x + 1}`);
+    console.log(iconPlayer)
+}
 
 class Players {
     constructor(name, score, money) {
@@ -72,6 +77,7 @@ class Players {
         this.playerScore = score;
         this.playerMoney = money;
         this.playerDeck = [];
+        this.iconPlayer = [];
     }
 
     getPlayerScore() {
@@ -105,6 +111,14 @@ class Players {
     // getPlayerDeck() {
     //     return this.playerDeck;
     // }
+
+    setIconPlayer(icon) {
+        this.iconPlayer = icon;
+    }
+
+    getIconPlayer() {
+        return this.iconPlayer
+    }
 
     findTopCard() {
         let topCard = new Cards();
@@ -142,6 +156,23 @@ class Players {
     }
 }
 
+function drawIconFirstTime() {
+    for (let x = 0; x < useres.length; x++) {
+        let contextPlayer = document.getElementById(`canvasPlayer${x + 1}`).getContext("2d");
+        useres[x].setIconPlayer(iconPlayer[x]);
+        contextPlayer.clearRect(0, 0, 245, 150);
+        contextPlayer.drawImage(useres[x].getIconPlayer(), 0, 0);
+    }
+}
+
+function reDrawIcon() {
+    for (let x = 0; x < useres.length; x++) {
+        let contextPlayer = document.getElementById(`canvasPlayer${x + 1}`).getContext("2d");
+        contextPlayer.clearRect(0, 0, 245, 150);
+        contextPlayer.drawImage(useres[x].getIconPlayer(), 0, 0);
+    }
+}
+
 let useres = [];
 let betRate;
 let moneyPot;
@@ -161,11 +192,13 @@ function newPlayer() {
         let playerMoney = parseInt(prompt(`Nhập số tiền người chơi thứ ${x + 1}`))
         player.setPlayerMoney(playerMoney);
         useres[x] = player;
+        useres[x].setIconPlayer(iconPlayer[x]);
     }
+    drawIconFirstTime();
     betRate = parseInt(prompt("Nhập số tiền bạn muốn đặt cược mỗi lần chơi"));
     createNameAndMoney();
     drawWelcome();
-    console.log(useres)
+
 }
 
 // Make algorithm about Random math and rate
@@ -277,7 +310,10 @@ function compareScore() {
     topPlayer.setPlayerName(nameTop);
     topPlayer.setPlayerScore(topScore);
     calMoney();
-    checkMoney();
+    for (let m = 0; m < useres.length + 1; m++) {
+        checkMoney();
+    }
+    reDrawIcon();
     createNameAndMoney();
     displayToBoard();
     console.log(useres)
@@ -313,17 +349,9 @@ function checkMoney() {
             document.getElementById(`topCard${useres.length + 1}`).innerHTML = ``;
         }
     }
-    console.log(useresRemoved)
+    console.log(useresRemoved);
 }
 
-// function checkFinalWinner() {
-//     if (useres.length === 1) {
-//         context.clearRect(0, 0, 800, 370);
-//         context.fillStyle = `#00FFFF`;
-//         context.font = "50px Arial";
-//         context.fillText(`Final Winner: ${useres[0].getPlayerName()}`, 30, 200);
-//     }
-// }
 
 function playQuick() {
     makeNewDeck();
@@ -361,7 +389,7 @@ function displayToBoard() {
     }
 }
 
-let rank = [];
+// let rank = [];
 
 // function rankPlayer() {
 //     rank = [];
@@ -378,10 +406,6 @@ let rank = [];
 //         display += `Rank 1 - ${useres[x].getPlayerName()}`
 //     }
 // }
-
-function showMoneyBoard(){
-    
-}
 
 
 document.getElementById("newGame").addEventListener("click", newPlayer);

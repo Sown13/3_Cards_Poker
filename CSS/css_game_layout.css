@@ -16,6 +16,7 @@
 
 
 table, tr, td, th {
+    position: center;
     border: solid;
     color: azure;
 }
@@ -26,9 +27,9 @@ body {background-color: black;
 }
 
 .footCanvas {
-    position: relative;
-    animation: footCanvas 4s;
-    animation-iteration-count: infinite;
+    position: center;
+    animation: footCanvas 3s infinite;
+    /*animation-iteration-count: infinite;*/
 }
 @keyframes footCanvas {
     from {left:0;transform: scaleX(1);
@@ -36,6 +37,23 @@ body {background-color: black;
     to {right:0; transform: scaleX(-1);
     }
 }
+
+/*.footCanvas{*/
+/*    position: center;*/
+/*    animation: footCanvas 6s;*/
+/*    animation-iteration-count: infinite;*/
+/*}*/
+
+/*@keyframes footCanvas {*/
+/*    from {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+
 /*img:hover {*/
 /*    transform: scaleX(-1);*/
 /*}*/
@@ -52,3 +70,4 @@ body {background-color: black;
 /*    to {right:0; transform: scaleX(-1);*/
 /*    }*/
 /*}*/
+
