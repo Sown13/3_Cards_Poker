@@ -375,7 +375,8 @@ function showScoreAndTopCard() {
 }
 
 let board1 = document.getElementById("board1");
-let board2 = document.getElementById("board2")
+let board2 = document.getElementById("board2");
+let board3= document.getElementById("board3");
 function displayToBoard() {
     // document.getElementById(`myCanvas`).innerHTML = `${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()}`;
     if (useres.length === 1) {

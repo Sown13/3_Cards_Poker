@@ -7,21 +7,6 @@
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/5163.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/background_main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/background_main_resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/background_main_resized_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/cardback_type_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/character_main_jean_resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/character_main_jean_resized_removedbg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/character_main_klee.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/character_main_klee_reload.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/character_main_klee_resized.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/iloveimg-resized.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/qiqi_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/qiqi_1_50x30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/qiqi_1_80.50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Image/static-assets-upload5885570726520209042.webp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
     </list>
@@ -96,7 +81,7 @@
       <workItem from="1678716457766" duration="11351000" />
       <workItem from="1678748234758" duration="1047000" />
       <workItem from="1678756077545" duration="83000" />
-      <workItem from="1678761778747" duration="5146000" />
+      <workItem from="1678761778747" duration="5911000" />
     </task>
     <servers />
   </component>

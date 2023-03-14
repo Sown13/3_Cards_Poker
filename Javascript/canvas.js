@@ -111,14 +111,15 @@ document.getElementById("howToPlay").addEventListener("click", drawHowToPlay);
 
 function drawPlayerList() {
     context.clearRect(0, 0, 800, 370);
+    context.drawImage(board3,0,0);
     context.fillStyle = `#00FFFF`;
     context.font = `25px Arial`;
-    context.fillText(`Player Name`, 70, 40);
-    context.fillText(`Player Money`, 600, 40);
+    context.fillText(`Player Name`, 60, 95);
+    context.fillText(`Player Money`, 330, 95);
     for (let x = 0; x < useres.length; x++) {
-        context.fillText(`${useres[x].getPlayerName()}`, 100, 90 + x * 40);
-        context.fillText(`------------------------`, 300, 90 + x * 40);
-        context.fillText(`${useres[x].getPlayerMoney()}  $`, 650, 90 + x * 40);
+        context.fillText(`${useres[x].getPlayerName()}`, 70, 125 + x * 25);
+        context.fillText(`---------`, 230, 125 + x * 25);
+        context.fillText(`${useres[x].getPlayerMoney()}  $`, 350, 125 + x * 25);
     }
 }
 
