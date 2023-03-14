@@ -96,15 +96,15 @@ function drawHowToPlay() {
     context.fillText(`Hướng dẫn chơi:`, 10, 30);
     context.font = `20px Arial`;
     context.fillText(`Sau khi khởi tạo số người chơi, tên người chơi, số tiền tham gia, số tiền cược`, 20, 60)
-    context.fillText(`Ấn nút [Bộ bài mới] để khởi tạo bộ bài mới`, 20, 90);
-    context.fillText(`Ấn nút [Chia bài] để chia bài cho mỗi người chơi `, 20, 120);
-    context.fillText(`Ấn nút [Kết quả] để tính và hiển thị kết quả, thông báo người chiến thắng`, 20, 150);
-    context.fillText(`Có thể tiếp tục chia đến khi hết bài hoặc quay về bước [Bộ bài mới]`, 20, 180);
-    context.fillText(`Có thể ấn nút [Chơi nhanh] để bỏ qua 3 bước trên và đến thẳng kết quả của Round đấu này`, 20, 210);
-    context.fillText(`Luật chơi như luật 3 cây bình thường (trừ việc tính tiền)`, 20, 240);
+    context.fillText(`Ấn nút [BỘ BÀI MỚI] để khởi tạo bộ bài mới`, 20, 90);
+    context.fillText(`Ấn nút [CHIA BÀI] để chia bài cho mỗi người chơi `, 20, 120);
+    context.fillText(`Ấn nút [KẾT QUẢ] để tính và hiển thị kết quả, thông báo người chiến thắng`, 20, 150);
+    context.fillText(`Có thể tiếp tục chia đến khi hết bài hoặc quay về bước [BỘ BÀI MỚI]`, 20, 180);
+    context.fillText(`Có thể ấn nút [CHƠI NHANH] để bỏ qua 3 bước trên và đến thẳng kết quả của Round`, 20, 210);
+    context.fillText(`Luật chơi như luật 3 cây bình thường`, 20, 240);
     context.fillText(`Qua mỗi vòng đấu, người chiến thắng sẽ nhận được số tiền cược của mỗi người chơi khác`, 20, 270);
     context.fillText(`Tiếp tục chơi cho đến khi tìm ra người chiến thắng cuối cùng (người duy nhất còn tiền)`, 20, 300);
-    context.fillText(`Tránh việc [chia bài] 2 lần mà không tính kết quả, tiền có thể bị trừ 2 lần`, 20, 330);
+    context.fillText(`Tránh việc [CHIA BÀI] 2 lần mà không tính kết quả, tiền có thể bị trừ 2 lần`, 20, 330);
 }
 
 document.getElementById("howToPlay").addEventListener("click", drawHowToPlay);
