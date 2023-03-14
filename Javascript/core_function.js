@@ -227,7 +227,6 @@ function dealCards() {
             deck.splice(cardIndexRemove, 1)
         }
     }
-    // canvasBackSide();
     moneyPot = betRate * useres.length;
     calPlayerScore();
     callFindTopCard();
@@ -332,6 +331,7 @@ function calMoney() {
     }
 }
 
+
 let useresRemoved = [];
 
 function checkMoney() {
@@ -374,38 +374,28 @@ function showScoreAndTopCard() {
     }
 }
 
+let board1 = document.getElementById("board1");
+let board2 = document.getElementById("board2")
 function displayToBoard() {
     // document.getElementById(`myCanvas`).innerHTML = `${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()}`;
     if (useres.length === 1) {
         context.clearRect(0, 0, 800, 370);
-        context.fillStyle = `#00FFFF`;
+        context.drawImage(board2,0,0)
+        context.fillStyle = `#DC143C`;
         context.font = "50px Arial";
-        context.fillText(`Final Winner: ${useres[0].getPlayerName()}`, 30, 200);
+        context.fillText(`Final Winner`,85,81);
+        context.font = "35px Arial";
+        context.fillText(`${useres[0].getPlayerName()} Thắng ${useres[0].getPlayerMoney()} VND`, 65, 280);
     } else {
         context.clearRect(0, 0, 800, 370);
-        context.fillStyle = `#00FFFF`;
+        context.drawImage(board1,0,0);
+        context.fillStyle = `#FF1493`;
         context.font = "50px Arial";
-        context.fillText(`Round Winner: ${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()} điểm`, 30, 200);
+        context.fillText(`Round Winner: `,60,150)
+        context.fillText(`${topPlayer.getPlayerName()} --- ${topPlayer.getPlayerScore()} điểm`, 110, 230);
     }
 }
 
-// let rank = [];
-
-// function rankPlayer() {
-//     rank = [];
-//     for (let x = 0; x < useres.length; x++) {
-//         rank[x] = useres[x].getPlayerMoney();
-//     }
-//     rank.sort();
-// }
-//
-// function displayRank(){
-//     rankPlayer();
-//     let display = ``;
-//     for (let x=0;x<rank.length;x++){
-//         display += `Rank 1 - ${useres[x].getPlayerName()}`
-//     }
-// }
 
 
 document.getElementById("newGame").addEventListener("click", newPlayer);

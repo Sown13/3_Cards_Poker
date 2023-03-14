@@ -144,6 +144,7 @@ function drawJoker() {
     context.drawPokerCard(550, 80, 200, suitCardCanvas[Math.floor(Math.random() * 4)], 'joker');
 }
 
+
 let background =[];
 for (let y = 0; y < 9; y++) {
     background[y] = document.getElementById(`back${y + 1}`);
