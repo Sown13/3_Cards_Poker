@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Javascript/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,7 +85,7 @@
       <workItem from="1678808422466" duration="1483000" />
       <workItem from="1678862420518" duration="192000" />
       <workItem from="1678862622514" duration="24000" />
-      <workItem from="1679016387064" duration="2994000" />
+      <workItem from="1679016387064" duration="7135000" />
     </task>
     <servers />
   </component>

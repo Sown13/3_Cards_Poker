@@ -78,6 +78,7 @@ function canvasNewDeck() {
         }
     }
 }
+
 //
 // let canvasPlayer = document.getElementById("").getContext("2d");
 // function canvasBackSide() {
@@ -111,7 +112,7 @@ document.getElementById("howToPlay").addEventListener("click", drawHowToPlay);
 
 function drawPlayerList() {
     context.clearRect(0, 0, 800, 370);
-    context.drawImage(board3,0,0);
+    context.drawImage(board3, 0, 0);
     context.fillStyle = `#00FFFF`;
     context.font = `25px Arial`;
     context.fillText(`Player Name`, 60, 95);
@@ -146,21 +147,26 @@ function drawJoker() {
 }
 
 
-let background =[];
+let background = [];
 for (let y = 0; y < 9; y++) {
     background[y] = document.getElementById(`back${y + 1}`);
-    background.push(iconPlayer[y]);
+}
 
-    function drawRandom() {
-        context.clearRect(0, 0, 800, 370);
-        let i = Math.floor(Math.random() * 9);
-        console.log(i);
-        context.drawImage(background[i], 0, 0);
-    }
+window.onload = function drawRandom() {
+    context.clearRect(0, 0, 800, 370);
+    let i = Math.floor(Math.random() * 9);
+    console.log(i);
+    context.drawImage(background[i], 0, 0);
+}
+function drawRandom() {
+    context.clearRect(0, 0, 800, 370);
+    let i = Math.floor(Math.random() * 9);
+    console.log(i);
+    context.drawImage(background[i], 0, 0);
 }
 
 
-document.getElementById("background").addEventListener("click", drawRandom);
+    document.getElementById("background").addEventListener("click", drawRandom);
 
 
 

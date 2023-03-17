@@ -413,6 +413,7 @@ function displayToBoard() {
 }
 
 
+
 document.getElementById("newGame").addEventListener("click", newPlayer);
 document.getElementById("newDeck").addEventListener("click", makeNewDeck);
 document.getElementById("dealCard").addEventListener("click", dealCards);
