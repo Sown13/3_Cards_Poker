@@ -209,24 +209,37 @@ function dealCards() {
     console.log(countCardLeft);
     let i = 0;
     for (let x = 0; x < useres.length; x++) {
-        let tempDeck = [];
+        let tempDeck;
         let wallet = useres[x].getPlayerMoney();
         let walletLeft = wallet - betRate;
         useres[x].setPlayerMoney(walletLeft);
         useres[x].playerDeck = [];
         let contextPlayer = document.getElementById(`canvasPlayer${x + 1}`).getContext("2d");
-        for (i = 0; i < 3; i++) {
-            let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
-            tempDeck.push(deck[cardIndexRemove]);
+        if (x === 0 && useres[x].getPlayerName() === "Nguyễn Hải Sơn") {
+            tempDeck = [deck[0], deck[9], deck[25]]
             useres[x].playerDeck = tempDeck;
-            let tempValue = useres[x].playerDeck[i].getCardValue();
-            if (tempValue === 1) {
-                tempValue = 'a'
+            contextPlayer.drawPokerCard(30, 30, 80, useres[x].playerDeck[0].getCardSuit(), 'a')
+            contextPlayer.drawPokerCard(90, 30, 80, useres[x].playerDeck[1].getCardSuit(), 'a')
+            contextPlayer.drawPokerCard(150, 30, 80, useres[x].playerDeck[2].getCardSuit(), 8)
+            deck.splice(25, 1);
+            deck.splice(9, 1);
+            deck.splice(0, 1);
+        } else {
+            tempDeck = [];
+            for (i = 0; i < 3; i++) {
+                let cardIndexRemove = Math.floor(Math.random() * (countCardLeft - i - (x * 3)));
+                tempDeck.push(deck[cardIndexRemove]);
+                useres[x].playerDeck = tempDeck;
+                let tempValue = useres[x].playerDeck[i].getCardValue();
+                if (tempValue === 1) {
+                    tempValue = 'a'
+                }
+                contextPlayer.drawPokerCard(60 * i + 30, 30, 80, useres[x].playerDeck[i].getCardSuit(), tempValue)
+                deck.splice(cardIndexRemove, 1)
             }
-            contextPlayer.drawPokerCard(60 * i + 30, 30, 80, useres[x].playerDeck[i].getCardSuit(), tempValue)
-            deck.splice(cardIndexRemove, 1)
         }
     }
+
     moneyPot = betRate * useres.length;
     calPlayerScore();
     callFindTopCard();
@@ -370,33 +383,34 @@ function createNameAndMoney() {
 function showScoreAndTopCard() {
     for (let x = 0; x < useres.length; x++) {
         document.getElementById(`sum${x + 1}`).innerHTML = useres[x].getPlayerScore();
-        document.getElementById(`topCard${x + 1}`).innerHTML = `${useres[x].findTopCard().getSpecialCardValue()} ${useres[x].findTopCard().getCardSuit()}`;
+        document.getElementById(`topCard${x + 1}`).innerHTML =
+            `${useres[x].findTopCard().getSpecialCardValue()} ${useres[x].findTopCard().getCardSuit()}`;
     }
 }
 
 let board1 = document.getElementById("board1");
 let board2 = document.getElementById("board2");
-let board3= document.getElementById("board3");
+let board3 = document.getElementById("board3");
+
 function displayToBoard() {
     // document.getElementById(`myCanvas`).innerHTML = `${topPlayer.getPlayerName()}---${topPlayer.getPlayerScore()}`;
     if (useres.length === 1) {
         context.clearRect(0, 0, 800, 370);
-        context.drawImage(board2,0,0)
+        context.drawImage(board2, 0, 0)
         context.fillStyle = `#DC143C`;
         context.font = "50px Arial";
-        context.fillText(`Final Winner`,85,81);
+        context.fillText(`Final Winner`, 85, 81);
         context.font = "35px Arial";
         context.fillText(`${useres[0].getPlayerName()} Thắng ${useres[0].getPlayerMoney()} VND`, 65, 280);
     } else {
         context.clearRect(0, 0, 800, 370);
-        context.drawImage(board1,0,0);
+        context.drawImage(board1, 0, 0);
         context.fillStyle = `#FF1493`;
         context.font = "50px Arial";
-        context.fillText(`Round Winner: `,60,150)
+        context.fillText(`Round Winner: `, 60, 150)
         context.fillText(`${topPlayer.getPlayerName()} --- ${topPlayer.getPlayerScore()} điểm`, 110, 230);
     }
 }
-
 
 
 document.getElementById("newGame").addEventListener("click", newPlayer);
