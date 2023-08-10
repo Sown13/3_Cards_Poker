@@ -239,7 +239,6 @@ function dealCards() {
             }
         }
     }
-
     moneyPot = betRate * useres.length;
     calPlayerScore();
     callFindTopCard();
@@ -408,7 +407,7 @@ function displayToBoard() {
         context.fillStyle = `#FF1493`;
         context.font = "50px Arial";
         context.fillText(`Round Winner: `, 60, 150)
-        context.fillText(`${topPlayer.getPlayerName()} --- ${topPlayer.getPlayerScore()} điểm`, 110, 230);
+        context.fillText(`${topPlayer.getPlayerName()} --- ${topPlayer.getPlayerScore()} điểm`, 70, 230);
     }
 }
 

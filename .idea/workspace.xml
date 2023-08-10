@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Image/download.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Javascript/canvas.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/canvas.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Slide/CASE STUDY.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Slide/CASE STUDY.pptx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +47,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Learning/Codegym_Case/Module_1&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Learning/Codegym_Module_1/Codegym_Minitest/Codegym_Case/Module_1&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,7 +87,18 @@
       <workItem from="1678808422466" duration="1483000" />
       <workItem from="1678862420518" duration="192000" />
       <workItem from="1678862622514" duration="24000" />
-      <workItem from="1679016387064" duration="7135000" />
+      <workItem from="1679016387064" duration="7593000" />
+      <workItem from="1679040173202" duration="2802000" />
+      <workItem from="1679048814237" duration="696000" />
+      <workItem from="1679059597799" duration="1120000" />
+      <workItem from="1679218291627" duration="592000" />
+      <workItem from="1679275239514" duration="1467000" />
+      <workItem from="1679280738692" duration="817000" />
+      <workItem from="1679288299465" duration="197000" />
+      <workItem from="1679297629444" duration="126000" />
+      <workItem from="1685184930003" duration="567000" />
+      <workItem from="1687621449755" duration="27000" />
+      <workItem from="1687786314139" duration="718000" />
     </task>
     <servers />
   </component>
