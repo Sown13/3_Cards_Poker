@@ -5,9 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b6b37c4-bfe0-4ff2-be86-ca176f546aea" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Module_1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Image/download.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HTML/Module_1_Case_ThreeCardPoker.html" beforeDir="false" afterPath="$PROJECT_DIR$/HTML/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Javascript/core_function.js" beforeDir="false" afterPath="$PROJECT_DIR$/Javascript/core_function.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Slide/CASE STUDY.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Slide/CASE STUDY.pptx" afterDir="false" />
     </list>
@@ -99,6 +101,7 @@
       <workItem from="1685184930003" duration="567000" />
       <workItem from="1687621449755" duration="27000" />
       <workItem from="1687786314139" duration="718000" />
+      <workItem from="1691657727420" duration="107000" />
     </task>
     <servers />
   </component>
